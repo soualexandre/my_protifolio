@@ -110,14 +110,14 @@ export const pt: TranslationKeys = {
         degreeType: "bachelor",
       },
       {
-        title: "Pós 01: Linguagens e Paradigmas",
+        title: "Linguagens e Paradigmas",
         institution: "Gran Faculdade",
         description: 'O "cérebro" por trás das decisões arquiteturais e Clean Code.',
         seal: "Pós",
         degreeType: "postgrad",
       },
       {
-        title: "Pós 02: Desenvolvimento de Sistemas",
+        title: "Desenvolvimento de Sistemas",
         institution: "IFTO",
         description: "Especialização em engenharia moderna, mobile e web de alta performance.",
         seal: "Pós",
