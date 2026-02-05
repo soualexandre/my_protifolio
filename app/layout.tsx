@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: "Alexandre Souza | Senior Developer",
   description:
     "Especialista em Performance & Backend. +6 anos escalando sistemas. Base: Brasil | Atuação: Global.",
+  icons: {
+    icon: "/profile.jpeg",
+    apple: "/profile.jpeg",
+  },
 };
 
 export default function RootLayout({
