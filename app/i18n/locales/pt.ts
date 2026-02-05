@@ -12,6 +12,8 @@ export const pt: TranslationKeys = {
     contact: "Contato",
     projects: "Projetos",
     ariaNav: "Navegação principal",
+    openMenu: "Abrir menu",
+    closeMenu: "Fechar menu",
   },
   profile: {
     terminalTitle: "insta-terminal — perfil",

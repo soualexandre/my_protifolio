@@ -10,6 +10,8 @@ export const en: TranslationKeys = {
     contact: "Contact",
     projects: "Projects",
     ariaNav: "Main navigation",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
   },
   profile: {
     terminalTitle: "insta-terminal — profile",

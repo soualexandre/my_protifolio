@@ -44,6 +44,8 @@ export type TranslationKeys = {
     contact: string;
     projects: string;
     ariaNav: string;
+    openMenu: string;
+    closeMenu: string;
   };
   profile: {
     terminalTitle: string;
