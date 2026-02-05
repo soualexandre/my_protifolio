@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0d1117;
+  --foreground: #e6edf3;
+  --terminal-green: #3fb950;
+  --terminal-blue: #58a6ff;
+  --terminal-yellow: #d29922;
+  --terminal-purple: #a371f7;
+  --border-subtle: #30363d;
+  --card-bg: #161b22;
+  --live-pulse: #3fb950;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Live pulse animation */
+@keyframes live-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.5);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(63, 185, 80, 0);
+    opacity: 0.9;
+  }
+}
+
+.live-ring {
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+/* Pipeline connector line */
+.pipeline-line {
+  background: linear-gradient(
+    to bottom,
+    var(--terminal-green) 0%,
+    var(--terminal-green) 40%,
+    var(--border-subtle) 100%
+  );
+}
+
+/* Data flow particles */
+@keyframes flow-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.flow-particle {
+  animation: flow-right 2.5s linear infinite;
+}
+
+/* Data transmission: packet stream */
+@keyframes data-packet {
+  0% {
+    transform: translateX(-120%) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.data-packet {
+  animation: data-packet 2s linear infinite;
+}
+
+/* Arrow sliding left → right (smooth data flow) */
+@keyframes arrow-slide-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.7;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(350%);
+    opacity: 0.7;
+  }
+}
+
+.arrow-slide {
+  animation: arrow-slide-right 3.2s ease-in-out infinite;
+}
+
+/* Transmission conduit glow */
+@keyframes conduit-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.conduit-glow {
+  animation: conduit-pulse 2s ease-in-out infinite;
+}
+
+/* Counter number animation (for experience years) */
+@keyframes count-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
