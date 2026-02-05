@@ -15,7 +15,7 @@ export const en: TranslationKeys = {
   },
   profile: {
     terminalTitle: "insta-terminal — profile",
-    tagline: "🚀 Specialist in Performance & Backend",
+    tagline: "🚀 Specialist in Performance Frontend & Backend",
     yearsScale: "🏆 +6 years scaling systems (100k+ users)",
     education: "🎓 3x Post-Graduate | IFTO • Gran • IFSulDeMinas",
     location: "📍 Base: Brazil | Global reach 🌎",

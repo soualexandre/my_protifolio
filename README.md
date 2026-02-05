@@ -24,7 +24,7 @@ Este portfólio apresenta experiência, formação, cases de melhoria e projetos
 | **Contato** | Rodapé em estilo terminal com localização, e-mail, telefone e status. |
 | **i18n** | Inglês (padrão), Português e Espanhol — seletor de idioma no header. |
 | **Responsivo** | Layout adaptado para mobile e desktop. |
-
+ Especialista em Performance e Backend
 ---
 
 ## Stack tecnológica
