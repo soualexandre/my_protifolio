@@ -74,6 +74,9 @@ export type TranslationKeys = {
     beforeLabel: string;
     problemLabel: string;
     afterLabel: string;
+    commitHistory: string;
+    debugLog: string;
+    beforeVsAfter: string;
     cases: ImprovementCase[];
   };
   academic: {

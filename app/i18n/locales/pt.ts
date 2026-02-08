@@ -67,6 +67,9 @@ export const pt: TranslationKeys = {
     beforeLabel: "Antes",
     problemLabel: "Problema",
     afterLabel: "Depois",
+    commitHistory: "Histórico de commits",
+    debugLog: "Log de debug",
+    beforeVsAfter: "Antes vs Depois",
     cases: [
       {
         category: "Performance & Escalabilidade",
