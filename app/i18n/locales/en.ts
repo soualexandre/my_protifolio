@@ -36,6 +36,7 @@ export const en: TranslationKeys = {
     downloadCvStep3: "Projects viewed",
     downloadCvPromptClick: "Click to download the resume",
     downloadCvFnName: "downloadResume",
+    downloadCvFilename: "Alexandre-Souza-Resume.pdf",
   },
   experience: {
     title: "// Continuous Deployment",

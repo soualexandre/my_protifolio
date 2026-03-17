@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { useLanguage } from "@/app/context/LanguageContext";
 
-const RESUME_URL = "/curriculo.pdf";
+const RESUME_URL = "/Alexandre%20Souza.pdf";
 
 type State = "idle" | "invoking" | "running" | "done";
 
@@ -17,6 +17,11 @@ export function ResumeDownload() {
   const { tr } = useLanguage();
   const [state, setState] = useState<State>("idle");
   const [logLine, setLogLine] = useState(0);
+  const downloadFilenameRef = useRef(tr.profile.downloadCvFilename);
+
+  useEffect(() => {
+    downloadFilenameRef.current = tr.profile.downloadCvFilename;
+  }, [tr.profile.downloadCvFilename]);
 
   const runDownload = useCallback(() => {
     if (state === "running" || state === "invoking") return;
@@ -34,7 +39,7 @@ export function ResumeDownload() {
 
         const a = document.createElement("a");
         a.href = RESUME_URL;
-        a.download = "curriculo-alexandre-souza.pdf";
+        a.download = downloadFilenameRef.current;
         a.rel = "noopener noreferrer";
         document.body.appendChild(a);
         a.click();

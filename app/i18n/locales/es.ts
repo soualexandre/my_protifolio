@@ -36,6 +36,7 @@ export const es: TranslationKeys = {
     downloadCvStep3: "Proyectos vistos",
     downloadCvPromptClick: "Clic para descargar el currículum",
     downloadCvFnName: "descargarCurriculum",
+    downloadCvFilename: "Alexandre-Souza-Curriculum.pdf",
   },
   experience: {
     title: "// Despliegue Continuo",

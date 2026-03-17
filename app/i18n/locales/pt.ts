@@ -38,6 +38,7 @@ export const pt: TranslationKeys = {
     downloadCvStep3: "Projetos vistos",
     downloadCvPromptClick: "Clique para baixar o currículo",
     downloadCvFnName: "baixarCurriculo",
+    downloadCvFilename: "Alexandre-Souza-Curriculo.pdf",
   },
   experience: {
     title: "// Implantação Contínua",

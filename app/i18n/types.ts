@@ -70,6 +70,7 @@ export type TranslationKeys = {
     downloadCvStep3: string;
     downloadCvPromptClick: string;
     downloadCvFnName: string;
+    downloadCvFilename: string;
   };
   experience: {
     title: string;
