@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/app/context/LanguageContext";
+import { ResumeDownload } from "./ResumeDownload";
 
 const GITHUB_URL = "https://github.com/soualexandre";
 const LINKEDIN_URL = "https://www.linkedin.com/in/eualexandre/";
@@ -91,6 +92,8 @@ export function SocialHeader() {
             </div>
           </div>
         </div>
+
+        <ResumeDownload />
       </div>
     </header>
   );

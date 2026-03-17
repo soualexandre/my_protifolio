@@ -148,6 +148,7 @@ my-portifolio/
 
 - **Conteúdo e textos:** edite os arquivos em `app/i18n/locales/` (`en.ts`, `pt.ts`, `es.ts`) para alterar textos, experiências, casos de melhoria, projetos em destaque, formação e rodapé.
 - **Foto de perfil:** substitua `public/profile.jpeg` mantendo o nome ou atualize a referência no componente que exibe o avatar.
+- **Currículo (PDF):** coloque seu currículo em `public/curriculo.pdf` para o botão de download na seção inicial funcionar (nome do arquivo ao baixar: `curriculo-alexandre-souza.pdf`).
 - **Repositórios pinados:** o usuário GitHub está definido em `app/api/github-pinned/route.ts` (constante `USER_LOGIN`). Altere para seu usuário e fixe os repositórios desejados no seu perfil do GitHub.
 - **Cores e tema:** variáveis CSS em `app/globals.css` (ex.: `--terminal-green`, `--foreground`, `--background`).
 

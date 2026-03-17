@@ -226,3 +226,245 @@ body {
 .data-log-line {
   animation: data-log-line 0.3s ease-out forwards;
 }
+
+/* CV download terminal: blinking cursor */
+@keyframes cv-cursor-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.cv-cursor {
+  animation: cv-cursor-blink 1s step-end infinite;
+}
+
+/* CV download: log lines appear */
+@keyframes cv-log-in {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cv-log-line {
+  animation: cv-log-in 0.25s ease-out forwards;
+}
+
+/* Dots loading pulse */
+@keyframes cv-dots-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.cv-dots-inner {
+  animation: cv-dots-pulse 0.6s ease-in-out infinite;
+}
+
+/* Run button play icon hover */
+.cv-run-btn:hover .cv-play-icon {
+  transform: scale(1.15);
+}
+
+.cv-play-icon {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+/* Waiting for user: subtle pulse so it feels "idle, ready for input" */
+@keyframes cv-waiting-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.cv-waiting {
+  animation: cv-waiting-pulse 2s ease-in-out infinite;
+}
+
+/* Resume download: botão no estilo comando de programação */
+.resume-download-btn {
+  border: 1px solid var(--border-subtle);
+  background: #0d1117;
+  color: var(--foreground);
+}
+
+.resume-download-btn:hover:not(:disabled) {
+  border-color: var(--terminal-green);
+  background: rgba(63, 185, 80, 0.08);
+}
+
+/* Tamanho fixo e compacto na horizontal */
+.resume-download-btn-fixed {
+  width: 100%;
+  min-width: 14rem;
+  max-width: 17rem;
+}
+
+@media (min-width: 640px) {
+  .resume-download-btn-fixed {
+    width: 17rem;
+    min-width: 17rem;
+    max-width: 17rem;
+  }
+}
+
+.resume-cmd-prompt {
+  color: var(--terminal-green);
+  border-color: var(--border-subtle);
+  background: rgba(63, 185, 80, 0.06);
+}
+
+.resume-download-btn:hover:not(:disabled) .resume-cmd-prompt {
+  background: rgba(63, 185, 80, 0.12);
+}
+
+.resume-cmd-fn {
+  color: var(--terminal-blue);
+}
+
+/* Idle = "waiting for you to click" — pulse no botão */
+.resume-download-btn[data-state="idle"] {
+  border-color: var(--terminal-green);
+  animation: resume-btn-waiting 2.2s ease-in-out infinite;
+}
+
+.resume-download-btn[data-state="idle"] .resume-cmd-prompt {
+  border-color: var(--terminal-green);
+  background: rgba(63, 185, 80, 0.1);
+}
+
+@keyframes resume-btn-waiting {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(63, 185, 80, 0);
+  }
+}
+
+.resume-download-btn[data-state="idle"]:hover:not(:disabled) {
+  animation: none;
+  box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.2);
+}
+
+/* Estado "invocando" = chamando a função (animação de execução) */
+.resume-download-btn[data-state="invoking"] {
+  border-color: var(--terminal-green);
+}
+
+.resume-download-btn[data-state="invoking"] .resume-cmd-prompt {
+  border-color: var(--terminal-green);
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--terminal-green);
+}
+
+.resume-cmd-invoke {
+  color: var(--terminal-blue);
+  animation: resume-fn-call 0.45s ease-out;
+}
+
+.resume-cmd-invoke-parens {
+  color: var(--terminal-green);
+  animation: resume-parens-call 0.45s ease-out;
+}
+
+@keyframes resume-fn-call {
+  0% {
+    opacity: 0.5;
+    text-shadow: 0 0 8px rgba(88, 166, 255, 0.6);
+  }
+  40% {
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(88, 166, 255, 0.9);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: none;
+  }
+}
+
+@keyframes resume-parens-call {
+  0% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 1;
+    color: var(--terminal-green);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.resume-download-btn[data-state="done"] {
+  border-color: var(--terminal-green);
+}
+
+.resume-download-btn[data-state="done"] .resume-cmd-prompt {
+  border-color: var(--terminal-green);
+  background: rgba(63, 185, 80, 0.1);
+  color: var(--terminal-green);
+}
+
+/* Cursor piscando no estilo terminal */
+@keyframes resume-cmd-cursor-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.resume-cmd-cursor {
+  color: var(--terminal-green);
+  animation: resume-cmd-cursor-blink 1s step-end infinite;
+}
+
+/* Dots de "running" */
+@keyframes resume-cmd-dots-opacity {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.resume-cmd-dots {
+  animation: resume-cmd-dots-opacity 0.8s ease-in-out infinite;
+}
+
+.resume-cmd-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Texto que pede o clique: animação de opacidade */
+@keyframes resume-prompt-opacity {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.resume-prompt-pulse {
+  animation: resume-prompt-opacity 1.8s ease-in-out infinite;
+}

@@ -56,6 +56,20 @@ export type TranslationKeys = {
     followGithub: string;
     followLinkedIn: string;
     hireCta: string;
+    downloadCv: string;
+    downloadCvCommand: string;
+    downloadCvAria: string;
+    downloadCvLogFetch: string;
+    downloadCvLogTransfer: string;
+    downloadCvLogDone: string;
+    downloadCvWaiting: string;
+    downloadCvTitle: string;
+    downloadCvClickLabel: string;
+    downloadCvStep1: string;
+    downloadCvStep2: string;
+    downloadCvStep3: string;
+    downloadCvPromptClick: string;
+    downloadCvFnName: string;
   };
   experience: {
     title: string;
